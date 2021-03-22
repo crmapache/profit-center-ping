@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=cyrillic-ext');
+@import 'variables';
+@import 'mixins';
+
+body {
+  margin:     0;
+  overflow-x: hidden;
+  color:      $text;
+}
+
+* {
+  font-family:                 'Roboto', sans-serif;
+  box-sizing:                  border-box;
+  -webkit-text-size-adjust:    100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.app {
+  @include flex();
+  flex-direction: column;
+  height:         100vh;
+  background:     radial-gradient(#333, #222);
+  padding:        20px;
+
+  .input-wrap {
+    @include flex();
+    margin-bottom: 15px;
+    width:         100%;
+
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+
+    input {
+      @include width(250px);
+      margin:           0;
+      margin-right:     10px;
+      border-radius:    4px;
+      outline:          none;
+      border:           1px solid #222;
+      padding:          9px 15px;
+      transition:       background-color .2s;
+      background-color: #242424;
+      color:            #fff;
+      font-size:        16px;
+
+      @media only screen and (max-width: 480px) {
+        margin-right:  0;
+        margin-bottom: 15px;
+      }
+
+      &:focus {
+        background-color: #1a1919;
+      }
+    }
+  }
+
+  .status {
+    margin-bottom: 15px;
+    color:         rgba(255, 255, 255, .6);
+    font-size:     16px;
+    text-align:    center;
+  }
+
+  .result-wrap {
+    min-height: 300px;
+
+    .addr {
+      color:         $text;
+      text-align:    center;
+      margin-bottom: 10px;
+      padding:       5px 15px;
+      background:    linear-gradient(120deg, #d4fc79, #96e6a1);
+      border-radius: 4px;
+      word-break:    break-all;
+    }
+
+    .result {
+      color:         transparentize($success, .2);
+      text-align:    center;
+      margin-bottom: 5px;
+
+      &.error {
+        color: transparentize($error, .2);
+      }
+    }
+  }
+}
+
