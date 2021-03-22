@@ -37,7 +37,7 @@ class App extends React.Component {
       /**
        * Current input value
        */
-      addr:       '',
+      addr:       'https://profitcenterfx.com/',
       statusCode: this.TYPE_URL_STATUS_CODE,
       /**
        * The remote address results for which you see now
@@ -149,7 +149,7 @@ class App extends React.Component {
             {this.statuses[this.state.statusCode]}
           </div>
           <div className={'input-wrap'}>
-            <input type="text" onInput={this.inputHandler}/>
+            <input type="text" value={this.state.addr} onInput={this.inputHandler}/>
             <Button
                 title={'Ping It!'}
                 color={'success'}
