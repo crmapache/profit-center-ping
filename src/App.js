@@ -102,7 +102,6 @@ class App extends React.Component {
    * Trim url, because i don't wanna show error if user type
    * not root address of site
    *
-   *
    * @param url
    * @return {string|*}
    */
