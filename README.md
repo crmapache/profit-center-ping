@@ -1,4 +1,4 @@
-[Live Demo](https://github.com/spacenear/profit-center-ping)
+[Live Demo](http://profit-center-ping.eclipseweb.ru/)
 
 ### Условие
 
