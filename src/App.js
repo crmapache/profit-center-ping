@@ -38,7 +38,7 @@ class App extends React.Component {
        * Current input value
        */
       addr:       'https://profitcenterfx.com/',
-      statusCode: this.TYPE_URL_STATUS_CODE,
+      statusCode: this.CHECK_URL_STATUS_CODE,
       /**
        * The remote address results for which you see now
        */
