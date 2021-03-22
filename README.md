@@ -1,3 +1,5 @@
+[Live Demo](https://github.com/spacenear/profit-center-ping)
+
 ### Условие
 
 Написать "пингователь" любого сервера на JavaScript, который покажет
